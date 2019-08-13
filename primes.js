@@ -1,16 +1,16 @@
 function isPrime(num) {
 	// Special cases
-	if (num < 1) { return false; }
-	if (num === 2) { return true; }
+	if (num <= 1) { return false; }
+	if (num == 2 || num == 3) { return true; }
+	if (!(num % 2)) { return false; }
 
 	// 2) Iterate through to the square root of num
 	// 		a) Check if the number is evenly divisible by the iterator
 	//		b) If it is, it isn't prime
 	//		c) If we complete the loop without finding a divisor, it is prime
 
-	var checkMax = Math.max(2, Math.floor(Math.sqrt(num)));
-	//console.log(`${checkMax - 1} iterations required`);
-	for (var i = 2; i <= checkMax; i++) {
+	var checkMax = Math.max(3, Math.floor(Math.sqrt(num)));
+	for (var i = 3; i <= checkMax; i += 2) {
 		if ((num % i) == 0) {
 			return false;
 		}
@@ -39,5 +39,5 @@ function getPrimes(num) {
 	return result;
 }
 
-console.log("Primes under 23", getPrimes(23));
-console.log("Primes under 230000", getPrimes(230000).length);
+console.log("Primes <= 23", getPrimes(23));
+console.log("Primes <= 230000", getPrimes(230000).length, "(big array! so just printed the length)");

@@ -1,0 +1,22 @@
+Challenge: Don't look up prime number algorithms on the internet. Practice doing it the hard way with nothing but your wits - like you'll have to do in interviews!
+
+PART 1: Write a function called isPrime that takes an integer parameter and outputs true if the number was prime and false if not. 
+
+HINT: 1 is not a prime number. 2 is a prime number. For anything else, the definition is that it is a number which has no divisors other than 1 and itself.
+
+PART 2: Analyze how efficient your isPrime algorithm is. Could it be more efficient? How so? Note your answer. and prepare to discuss in class tomorrow.
+
+log(N)
+
+
+PART 3: Write another function called getPrimes(n), which takes a positive integer n, and returns all prime numbers from 1 to n in an array.
+
+Guaranteed: n >= 1
+
+Input --> Output
+getPrimes(23) --> [2, 3, 5, 7, 11, 13, 17, 19, 23]
+getPrimes(10) --> [2, 3, 5, 7]
+
+HINT: Use your isPrime function from part 1 as a helper function.
+
+TO TURN IN: No action necessary tonight. We will whiteboard these solutions together tomorrow.
